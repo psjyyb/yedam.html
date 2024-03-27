@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션</title>
+    <style>
+        img{
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            box-shadow: 1px 1px 3px 2px #000;
+            animation-name: myany;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: initial;
+            
+
+        }
+        @keyframes myany{
+            
+        0%{
+            transform: perspective(2px) rotateY(0);
+           
+        }
+        50%{
+            transform: perspective(201px) rotateY(180deg);
+           
+        }
+        100%{
+            transform:  perspective(200px) rotateY(360deg);
+           
+        }
+    
+}
+    </style>
+</head>
+<body>
+    <img src="img/랄로.jpg" alt="랄로">
+    <img src="img/랄로2.jpg" alt="랄로2">
+    
+    
+</body>
+</html>

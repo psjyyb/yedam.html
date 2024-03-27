@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제어문</title>
+</head>
+<body>
+    <script>
+        // 짝수,홀수를 구한다 
+        //0을 넣었을때는 짝수입니다가 나오게한다.
+        //숫자가 아닌 타입을 넣었을때에는 숫자 데이터 아님
+        //취소를 눌럿을때랑 아무거도입력하지않고 넣었을때 입력취소가 나와야됨
+        // let num =prompt();
+        // if(num!=null&& num!==''){
+        //     if(Boolean(Number(num))){
+        //     if(num%2==0){
+        //          console.log(`${number} = 짝수입니다`);
+        //          alert(`${number} = 짝수입니다`);
+        //         document.write(`${number} = 짝수입니다`);
+        //     }else if(num%2!=0){
+        //         console.log(`${number} = 홀수입니다`);
+        //          alert(`${number} = 홀수입니다`);
+        //         document.write(`${number} = 홀수입니다`);
+        //     }else{
+        //          console.log("입력 취소");
+        //          alert("입력 취소")
+        //           document.write("입력 취소")
+        // }
+        //  }else {
+        //     console.log("숫자 데이터 아님");
+        //     alert("숫자 데이터 아님")
+        //  }
+        // } 
+        //  let korea = Number(prompt("국어점수"));
+        // let english = Number(prompt("영어점수"));
+        // let math = Number(prompt("수학점수"));
+        // let sum = (korea+english+math);
+        // let avg = sum/3;
+        // console.log(avg)
+        // if(avg>=90){
+        //     console.log("수");
+        //     alert("수");
+        //     document.write("수");
+        // }else if(avg>=80){
+        //     console.log("우");
+        //          alert("우");
+        //         document.write("우");
+        // }else if(avg>=70){
+        //     console.log("미");
+        //       alert("미");
+        //      document.write("미");
+        // }else if(avg>=60){
+        //     console.log("양");
+        //     alert("양");
+        //     document.write("양");
+        // }else{
+        //     console.log("가");
+        //     alert("가");
+        //     document.write("가");
+        // }
+        // console.log(korea,english,math,sum,avg);
+        
+            let input =prompt();
+            if(Boolean(input)){
+                if(input%2==0){
+                    console.log("짝수");
+                }else if(input%2==1){
+                    console.log("홀수");
+                }else{
+                    console.log("숫자아님");
+                }
+            }else{
+                console.log("입력취소");
+            }
+
+            // let day = Number(985);
+            // switch(day%7){
+            //     case 0 :
+            //         console.log("일요일")
+            //         break;
+            //     case 1 :
+            //         console.log("월요일")
+            //         break;
+            //     case 2 : 
+            //         console.log("화요일")
+            //         break; 
+            //     case 3 : 
+            //         console.log("수요일")
+            //         break;
+            //     case 4 : 
+            //         console.log("목요일") 
+            //         break;
+            //     case 5 : 
+            //         console.log("금요일")
+            //         break;
+            //     case 6 : 
+            //         console.log("토요일")
+            //         break;
+            //     default : "숫자아님"         
+            // }
+            // 평균값에 따라 수~가 출력
+            //switch 문 사용
+            //Math.floor(8.9857) => 8 
+            // let korea = Number(prompt("국어점수"));
+            // let english = Number(prompt("영어점수"));
+            // let math = Number(prompt("수학점수"));
+            // let sum = (korea+english+math);
+            // let avg = sum/3/10;
+            //  avg = Math.floor(avg);
+            // console.log(avg)
+            // switch(avg){
+            //     case 10 :
+            //     case 9 : console.log("수")
+            //      break;
+            //     case 8 : console.log("미")
+            //      break;
+            //     case 7 : console.log("우")
+            //      break;
+            //     case 6 : console.log("양")
+            //      break;
+            //     default :console.log("가") 
+            // }
+    //             //삼항 연산자 : 조건 ? true : false
+    //             let age = Number(prompt("나이"))
+    //             age>=18 ? console.log("판매가능") : console.log("판매불가";
+    //             console.log()
+     </script>
+</body>
+</html>
+<!-- // console.log();
+// alert();
+// document.write(); -->

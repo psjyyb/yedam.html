@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+        <style>
+            #container{
+                width: 500px;
+                margin: 0 auto;
+            }
+            #caption{
+                display: none;
+            }
+        </style>
+</head>
+<body>
+    <div id="container">
+    <h1>이벤트</h1>
+    <img src="../img/랄로3.jpg" alt="ralo"><br>
+    <button type="button" id="showBtn">상세설명 보기</button>
+    <div id = "caption">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit, maiores?</p>
+        <button type = "button" id="hideBtn">상세설명 닫기</button>
+    </div>
+    <button type="button" id="plusBtn">더하기</button>
+    <button type="button" id="multiBtn">곱하기</button>
+    <script>
+        // 이벤트 : 웹문서 안에서 사용자나 웹브라우저의 동작
+        // 이벤트 발생 : on이벤트명 = 이벤트 처리(핸들러) 연결
+
+        // 웹 요소를 변수에 저장
+        let showBtn = document.getElementById("showBtn");
+        let hideBtn = document.getElementById("hideBtn");
+        let caption = document.getElementById("caption");
+        let plusBtn = document.getElementById("plusBtn");
+        let multiBtn = document.getElementById("multiBtn");
+       
+        //이벤트에 이벤트 처리기 연결
+        showBtn.onclick = show;
+        hideBtn.onclick = hide;
+        plusBtn.onclick = plus;
+        multiBtn.onclick = multi;
+        // 상세 설명 보기 - show() 
+        function show(){
+            caption.style.display = "block";
+            showBtn.style.display = "none";
+        }
+        // 상세 설명 닫기 - hide()
+        function hide(){
+            caption.style.display = "none";
+            showBtn.style.display = "block";
+        }
+    
+        // 두 수를 입력 받아서
+        // 더하기 버튼 => 두수의 합을 콘솔창에 출력
+        function plus(){
+            let num1 = Number(prompt("num1"));
+            let num2 = Number(prompt("num2"));
+            console.log(`더한값 = ${num1+num2}`)
+        }
+        
+        // 곱하기 버튼 => 두수의 곱을 콘솔창에 출력
+        function multi(){
+          let num1 = Number(prompt("num1"));
+           let num2 = Number(prompt("num2"));
+            console.log(`곱한값 = ${num1*num2}`)
+        }
+        // min,max 넘겨받음 => min~max 합 계산 => 결과 return
+        // 함수 호출 => 결과 출력
+        function sum(min,max){
+            let total = 0;
+            for(let i=min; i<=max; i++){
+                total+=i;
+            }
+            return total;
+        }
+        console.log(sum(1,5));
+        // 합을 구하는 함수 
+        
+        // 함수 호출
+
+       
+    </script>
+      </div>  
+</body>
+</html>

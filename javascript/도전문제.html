@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제</title>
+</head>
+<body>
+    <h1>문제풀이</h1>
+    <script>
+        // let width = prompt("가로값 입력");
+        // let height = prompt("세로값 입력");
+        // let corredt = confirm("사각형의 너비는"+" "+width*height+"입니다");
+        // // document.write("사각형의 너비는"+" "+width*height+"입니다");
+
+        // let date = prompt("현재년도 입력");
+        // let year = prompt("태어난 년도 입력");
+        // let a = confirm(`태어난 연도는${year}이고,나이는${date-year+1}살입니다`);
+        // console.log(`태어난 연도는${year}년이고,나이는${date-year+1}살입니다`);
+        // alert(`태어난 연도는${year}년이고,나이는${date-year+1}살입니다`);
+        // document.write(`태어난 연도는${year}년이고,나이는${date-year+1}살입니다`);
+        
+        // 성적처리 
+        function sungjuk(name,korea,english,math){
+            let who = name;
+            let total = korea+english+math;
+            let avg = Math.round(total/3);
+            let grade = "";
+            switch(Math.floor(avg/10)){
+                case 10 :
+                case 9 : grade="A";
+                      break;
+                case 8 : grade="B";
+                     break;
+                case 7 : grade="C";
+                     break;
+                case 6 : grade="D";
+                     break;
+                default : grade="F";
+            }
+            return `${who} \t${total} \t${avg}  \t${grade}`;
+}
+            console.log(`이름   총점    평균    등급`)
+            console.log(sungjuk("aaa",100,100,90));
+            console.log(sungjuk("bbb",30,60,20));
+            console.log(sungjuk("ccc",70,80,90));
+    </script>
+    
+</body>
+</html>

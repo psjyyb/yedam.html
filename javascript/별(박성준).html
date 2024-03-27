@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별찍기과제</title>
+</head>
+<body>
+    <script>
+          //----------------------------------------------------
+         //다이아몬드 별찍기
+         let stars = "";
+         let s =0;
+         for (let i=1; i<=5; i++){
+            for(let j=1; j<=5-i; j++){
+                stars+= " ";
+            }
+            for(let k=1; k<=2*i-1; k++){
+                stars+="*";
+            }
+             stars+="\n";
+        }
+           for(let i=1; i<=4; i++){
+            for(let j=1; j<=i; j++){
+                stars+=" ";
+            }
+            for(let k=1; k<=7-s; k++){
+               stars+="*";
+            }
+            stars+="\n";
+             s=s+2;
+        }
+            console.log(stars)
+             //----------------------------------------------------
+             //모래시계
+             let watch = "";
+             let p =0;
+             let o =0;
+             for(let i=1; i<=5; i++){
+                for(let k=1; k<=i; k++){
+                    watch+=" ";
+                }
+                for(let j=1; j<=9-p; j++){
+                    watch+="*";
+                }
+                    watch+="\n";
+                    p=p+2;
+            }
+                for( let i=1; i<=4; i++){
+                    for(let j=1; j<=5-i; j++){
+                        watch+=" ";
+                    }
+                    for(let k=1; k<=2*i+1; k++){
+                        watch+="*";
+                    }
+                  watch+="\n";
+                    o=o+2;
+                }
+              
+                
+        console.log(watch)
+    </script>
+</body>
+</html>

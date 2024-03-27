@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내장객체</title>
+</head>
+<body>
+    <h1>내장객체</h1>
+    <script>
+        // 내장객체 : 미리 만들어진 객체
+        // Math 객체 : 수학관련 객체 , 인스턴스를 생성하지 않고 사용
+
+        // 로또번호
+       
+        for(let i=1; i<=5; i++){
+          let lotto = "";
+            for(let j=1; j<6; j++){
+              let num = Math.floor(Math.random() * 45)+1;
+              if(lotto.indexOf(num)==-1) {
+              lotto+=num+`\t`;
+            }else{
+              j--;
+            }
+        }
+        console.log(lotto);
+        }
+          console.log(`------배열이용------`)
+        for(let i=1; i<=5; i++){
+          let lottoNum = [];
+            for(let j=1; j<=6; j++){
+                let num = Math.floor(Math.random() * 45)+1;
+              if(lottoNum.indexOf(num)==-1) {
+              lottoNum.push(num);
+            }else{
+              j--;
+            }
+        }
+            console.log(lottoNum.join(`\t`));
+        }
+
+        //날짜 객체 : 반드시 인스턴스를 생성해서 사용
+        let today = new Date();
+        console.log(today);
+        console.log(today.getFullYear()+`년`);
+        console.log(today.getMonth()+1+"월");
+        console.log(today.getDate()+"일")
+        console.log(today.getDay())
+        switch(today.getDay()){
+          case 0 : console.log("일요일"); break;
+          case 1 : console.log("월요일"); break;
+          case 2 : console.log("화요일"); break;
+          case 3 : console.log("수요일"); break;
+          case 4 : console.log("목요일"); break;
+          case 5 : console.log("금요일"); break;
+          case 6 : console.log("토요일"); break;
+          default: console.log("잘못된 날짜 정보입니다.")
+        }
+        console.log(today.getTime())
+        console.log(new Date(today.getTime()));
+        console.log(new Date(1));
+        console.log(today.toLocaleString());
+
+        //크리스마스 몇일 남았는지 ? 
+      //  let xmas = new Date(2024,11,25);
+       let xmas = new Date("2024-12-25");
+       let remain = Math.floor((xmas - today)/(1000*60*60*24));
+       console.log(`크리스마스까지 ${remain}일 남았음`);
+
+      let meet = new Date("2024-03-05");
+      let time = Math.floor((today-meet)/(1000*60*60*24));
+      console.log(`개강한지 ${time}일 됨`)
+    // </script>
+</body>
+</html>

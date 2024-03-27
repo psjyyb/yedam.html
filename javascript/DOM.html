@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문서객체모델(DOM)</title>
+    <style>
+        p {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="hd"><b>문서 객체 모델</b>
+        <p id="child">Lorem ipsum dolor sit amet.</p>
+    </h1>
+    <img id="im" src="../img/랄로3.jpg" alt="어쩌라고">
+    <script>
+        let hd = document.querySelector("#hd");
+        let im = document.querySelector("#im");
+        let chile = document.querySelector("#child");
+        
+        // 태그 안의 내용 변경
+        // hd.innerText = "이미지변경";
+        // hd.innerHTML = "이미지변경";
+        // hd.textContent = "이미지변경";
+        
+        // 스타일 변경
+        hd.style.color = "white";
+        hd.style.backgroundColor = "black";
+        
+        // 속성 변경
+        im.src = "../img/랄로2.jpg";
+        im.setAttribute("src", "../img/랄로1.jpg");
+
+        hd.addEventListener("click",function(){
+            alert("부모 이벤트 발생");
+        },);
+        chile.addEventListener("click",function(){
+            alert("자식 이벤트 발생");
+            event.stopPropagation();
+        },);
+        hd.onclick = function(){
+            alert("hi")
+        }
+    </script>
+</body>
+</html>

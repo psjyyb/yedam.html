@@ -1,0 +1,86 @@
+
+#container{
+    width : 960px;
+    margin : 0 auto;
+}
+header{
+    /* background-color: rgb(250,90,120);   */
+    /* background: linear-gradient(to right top, blue,green 0%, red ); */
+    background: repeating-linear-gradient(45deg, #ff0,#ff0 10%, #fff 10%, #fff 20%);
+    padding-top: 10px;  
+    overflow: hidden;
+    border-radius: 30px;
+   
+    
+}
+header img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    border-radius:50%;
+    padding: 10px;
+}
+nav{
+    float: right;
+}
+nav ul{
+    padding-top: 12px;
+}
+header li{
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    margin-right: 50px;
+}
+
+header li a{
+    text-decoration: none;
+    color: white;
+    
+}
+section{
+    width: 740px;
+    float: left;
+    padding-right: 0%;  
+    
+}
+article{
+
+    border: 1px solid  #ccc ;
+    width: 336px;
+    padding: 10px;
+    margin: 5px;
+    float: left;
+    height: 290px;
+    border-radius: 30px;
+}
+article h3{
+    background: url(../img/강아지2.jpg)no-repeat left center;
+    background-size: 18px 18px;
+    padding-left: 22px;
+    
+}
+article p{
+    line-height: 1.5;
+    text-align:justify;
+    text-indent: 16px;
+}
+aside{
+    width: 220px;
+    float: right;
+    margin-top: 77px;
+}
+aside img{
+    width: 100%;
+    height: 207px;
+    border-radius: 30px;
+}
+footer{
+    /* background-color: rgb(29,45,90); */
+    /* background: radial-gradient(circle closest-side , red, orange,blue); */
+    background: repeating-radial-gradient(circle, #ff0, #ff0 10%,#0f0 10%, #0f0 20%);
+    clear: both;
+    text-align: center;
+    padding: 10px;
+    border-radius: 30px;
+}

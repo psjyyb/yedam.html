@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>첫 페이지</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gamja+Flower&family=Gugi&display=swap');
+            body p,h1, h3 {
+                font-family: "Gugi", sans-serif;
+            }
+            table{
+                border : 2px solid gray;
+                border-collapse: collapse;
+            }
+            th,td{
+                border: 1px solid #393434;
+                text-align: center;
+            }
+            thead, tfoot{
+                background-color: #ccc
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="top">
+             <li><a href="#text">텍스트 태그</a></li>
+            <li><a href="#list">목록 태그</a></li>
+            <li><a href="#table">표 태그</a></li>
+        </ul>
+        <h1><mark>내가 만든 첫 페이지!!</mark></h1>
+        <h2 id="text">텍스트 태그들</h2>
+        <h2><ruby>學習<rt>학습</rt></ruby><del>작은 제목</del></h2>
+        <h3>H<sub>2</sub>0, X<sup>2</sup>Y<sup>2</sup></h3>
+        <p><strong>Lorem ipsum</strong> dolor sit <br>amet consectetur adipisicing elit.
+             Fugiat<b> nesciunt fuga</b> <q>saepe<s>minima</s>  iste </q>
+             <blockquote>pugit <u>vero facere neque, </u>
+             >excepturi,<q> omnis <q>ullam<em> aut corrupti<em>.</blockquote> Sit quo, nulla laboriosam maiores in voluptates.</p>
+                <hr>
+                <div style="color:blue">
+            <p><b>Lorem ipsum, <i>dolor</i><em> sit</em> amet consectetur adipisicing elit. Optio, cumque.</b>Lorem ipsum, <br>dolor sit amet<strong> consectetur adipisicing elit.</strong> Ex, consequuntur!</p>
+            <pre><span style="color:red">Lorem, ipsum </span>dolor sit amet 
+                consectetu
+                r a
+                    di p i s i c  i n g   s s s selit. Facere, quis!</pre>
+                </div>
+                <p>사과<small>(15kg)</small> : 50,000원</p>
+                <abbr title="Internet of things">IOT</abbr>
+                <a href="#top">처음으로</a>
+                <h3 id="list">목록 만들기</h3>
+                <h4>순서가 있는 목록 : 코끼리 냉장고 넣기</h4>
+                <ol type="I" start="3">
+                    <li>냉장고 문을 연다</li>
+                    <li>코끼리를 넣는다</li>
+                    <li>냉장고 문을 닫는다.</li>
+                    <h4>순서 없는 목록 : 노란색 과일</h4>
+                    <ul>
+                        <li>바나나</li>
+                        <li>레몬</li>
+                        <li>망고</li>
+                    </ul>
+                    <h4>설명 목록 : 용어설명 사전식 표현</h4>
+                    <dl>
+                        <dt>html</dt>
+                        <dd>웹 문서에 내용을 만들어주는 언어</dd>
+                        <dt>css</dt>
+                        <dd>웹 문서에 디자인을 담당하는 스타일시트</dd>
+                        <dt>javascript</dt>
+                        <dd>사용자의 동작에 반응하는 동적 사이트를 만들기 </dd>
+                    </dl>
+                    <h3 id="table">표 만들기</h3>
+                    <table>
+                        <caption>표 제목</caption>
+                        <tr>
+                            <th>순번</th>
+                            <th>이름</th>
+                            <th>연락처</th>
+                            <th>이메일 주소</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>홍길동</td>
+                            <td>000-0000-0000</td>
+                            <td>abc@naver.com</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>성춘향</td>
+                            <td>111-1111-1111</td>
+                            <td>bcd@daum.net</td>
+                        </tr>
+                    </table>
+                    <table>
+                        <caption>선물용과 가정용의 상품 구성</caption>
+                         <colgroup>
+                            <col style="background-color: rgb(253, 217, 232);">
+                            <col>
+                            <col span="2" style="background-color:rgb(207, 207, 250);">
+                            <!-- <col> -->
+                        </colgroup>
+                        <thead>
+                            <tr>
+                            <th>용도</th>
+                            <th>중량</th>
+                            <th>개수</th>
+                            <th>가격</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">선물용</td>
+                                <td>3kg</td>
+                                <td>11~16과</td>
+                                <td>35,000원</td>
+                            </tr>
+                            <tr>
+                                <td>5kg</td>
+                                <td>18~26과</td>
+                                <td>52,000원</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">가정용</td>
+                                <td>3kg</td>
+                                <td>11~16과</td>
+                                <td>30,000원</td>
+                            </tr>
+                            <tr>
+                                <td>5kg</td>
+                                <td>18~26과</td>
+                                <td>47,000원</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                           <tr>
+                            <td colspan="4">*제품 구매 시기에 따라 가격이 변동 될 수 있습니다.</td>
+                        </tr>
+                        </tfoot>
+                    </table>
+                    <a href="#top">처음으로</a>
+                </ol>
+            </body>

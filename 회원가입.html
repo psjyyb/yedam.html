@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        #container{
+            width: 600px;
+            margin: 0 auto;
+        }
+        form ul label{
+            width: 120px;
+            /* display: inline-block; */
+            float: left;
+            
+        }
+        form li{
+            margin-bottom: 5px;
+        }
+        form ul{
+            list-style: none;
+        }
+        fieldset{
+            margin: 10px auto;
+        }
+        .redtext{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>회원 가입을 환영합니다</h1>
+        <form action="in.jsp" method="post" name="inform">
+            <fieldset>
+                <legend>사용자 정보</legend>
+                <ul>
+                    <li>
+                        <label for="uid"><span class="redtext">*</span> 아이디</label>
+                        <input type="id" name="uid" id="uid" required placeholder="4자 ~ 10자 사이, 공백없이" autofocus>
+                    </li>
+                    <li>
+                        <label for="mail"><span class="redtext">*</span> 이메일</label>
+                        <input type="email" name="mail" id="mail">
+                    </li>
+                    <li>
+                        <label for="upw"><span class="redtext">*</span> 비밀번호</label>
+                        <input type="password" name="pwd" id="pwd" required placeholder="문자와 숫자,특수 기호 포함">
+                    </li>
+                    <li>
+                        <label for="upw2"><span class="redtext">*</span> 비밀번호 확인</label>
+                        <input type="password" name="pwd2" id="pwd" required>
+                    </li>
+                    <li>
+                        <label for="notice">공지사항</label>
+                        <textarea name="notice" id="notice" cols="40" rows="5"readonly>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, quis. Deleniti, earum. Aperiam adipisci distinctio tempore fugit quam animi pariatur!</textarea>
+                    </li>
+            
+                        <label for="donggi">가입동기</label>
+                        <textarea name="donggi" id="donggi" cols="40" rows="5" placeholder="가입동기를 간략히 적어주세요."></textarea>
+                    </li>
+                </ul>
+            </fieldset>
+            <fieldset>
+                <legend>이벤트와 새로운 소식</legend>
+                        <label><input type="radio" value="agree" name="yes">메일 수신</label>
+                            <label><input type="radio" value="agree" name="no" checked>메일 수신 안 함</label>
+            </fieldset>
+            <input  type="submit" value="가입하기">
+            <input type="reset" value="취소">
+        </form>
+</div>
+</body>
+</html>

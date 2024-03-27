@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>객체(object)</title>
+</head>
+<body>
+    <h1>객체</h1>
+    <script>
+        // 객체 : 하나의 변수에 다양한 데이터와 기능을 가진 자료 유형
+        // 복합(참조) 유형
+        let obj = {
+        name : "hong",
+        age : 25,
+        arr : [1,2,3,4],
+        func : function(){
+            console.log(`${obj.name} 입니다`)
+        }
+            }
+        console.log(obj);
+        let obj2 = obj;
+        console.log(obj2);
+        obj2.name = "sung";
+        console.log(obj);
+
+        // 객체 반복문 (for each문 ,,?)
+        //for in : 객체의 key값을 가져옴
+        for(let key in obj){
+            console.log(`${key} : ${obj[key]}`)
+        }
+        obj.func();
+
+        // key가 객체 안에 있는 지 홧인 => in
+        // 있다 - true 
+        // 없다 - false 
+        console.log("name" in obj)
+        console.log("job" in obj)
+
+        // 객체에 속성이나 메소드 추가,수정
+        // 속성 key = 값 있으면 수정,  없으면 추가
+        
+        obj.age = 88; // 수정
+        obj.job = "programmer" // 추가
+        console.log(obj)
+        delete obj.age;  // 제거
+        console.log(obj)
+//--------------------------------------------------------------
+        // 객체 생성 함수 => 생성자 함수 함수명 : 대문자로 시작 
+        function Student(name,kor,eng,math){
+            this.name = name,
+            this.kor =kor,
+            this.eng = eng,
+            this.math = math,
+            Student.prototype.tot = function(){
+                return this.kor + this.eng + this.math;
+            }
+            Student.prototype.avg = function(){
+                return this.tot()/3;
+            }
+            Student.prototype.result = function(){
+                return `${this.name} \t ${this.tot()} \t ${this.avg()}`;
+            }
+        }
+
+        // 학생 객체를 배열에 저장
+        let students = [
+            new Student("김진형", 100, 100, 100),
+            new Student("배동규", 99, 99, 99 ),
+            new Student("김성훈", 29, 49, 69),
+            new Student("배성훈", 29, 49, 69),
+            new Student("장성훈", 29, 49, 69),
+        ];
+        // let kjh = new Student("김진형", 100, 100, 100);
+        // let bdg = new Student("배동규", 99, 99, 99 );
+        // let ksh = new Student("김성훈", 29, 49, 69 );
+        // console.log(kjh);
+        // console.log(bdg);
+
+        console.log (`이름 \t 총점 \t\ 평균`)
+        console.log(`----------------------`)
+        // console.log(kjh.result());
+        // console.log(bdg.result());
+        // console.log(ksh.result());
+        for (let idx in students){
+            console.log(students[idx].result())
+        }
+        console.log(`----------------------`)
+//----------------------------------------------------------
+        function Product(name,weight,price){
+            this.name = name,
+            this.weight = weight,
+            this.price = price,
+            Product.prototype.buy =function(w){
+                return w/this.weight*this.price;
+            }
+        }
+        let sam = new Product("삼겹살", 100, 1690);
+        let so = new Product("소고기", 100, 15000);
+        console.log(sam.buy(500)+`원`);
+        console.log(so.buy(500)+`원`);
+    </script>
+</body>
+</html>

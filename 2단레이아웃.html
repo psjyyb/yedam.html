@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2단 레이아웃</title>
+    <!-- <link rel="stylesheet" href="css/2단레이아웃.css"> -->
+    <style>
+        #container{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        header{
+            width: 100%;
+            background-color: #ccc;
+        }
+        aside{
+            width: 19%;
+            background-color: beige;
+        }
+        section{
+            width: 80%;
+            background-color:#eee;
+        }
+        footer{
+            width: 100%;
+            background-color:#ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <p> - container : 테두리1,너비960, 안여백20,화면중앙에위치</p>
+            <p> - header : 테두리1, 안여백10,아래 요소와 간격20</p>
+            <h1>사이트 제목</h1>
+        </header>
+        <section>
+            <h3>본문</h3>
+            <h4>내용 입력1</h4>
+            <h4>내용 입력2</h4>
+            <p>테두리 1, 너비620<br>
+            안여백 20 왼쪽으로 플로팅,<br>
+            아래요소와 간격20</p>
+        </section>
+        <aside>
+            <h3>사이드 바</h3>
+            <h4>광고1</h4>
+            <h4>광고2</h4>
+            <p>테두리 1,너비220,안여<br>
+            백 20,오른쪽으로 플로팅,<br>
+            아래요소와 간격 20, 배경색</p>
+        </aside>
+        <footer>
+            <h3>푸터</h3>
+            <h4>저작권 정보, 연락처 등</h4>
+            <p>테두리1, 양쪽 플로팅 해제, 안여백 10</p>
+        </footer>
+    </div>
+</body>
+</html>

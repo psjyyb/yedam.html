@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>강아지 용품</title>
+        <link href="css/강아지용품.css" rel="stylesheet">
+        <style>
+             /* #container{
+                width: 960px;
+                margin: 0 auto;
+            }
+            section{
+                width: 800px;
+                box-sizing: border-box;
+                float: left;
+                background-color: antiquewhite;
+                padding: 10px;
+
+            }
+            article{
+                box-sizing: border-box;
+                width: 380px;
+                padding: 10px;
+                margin: 5px;
+                float: left;
+                border: 1px solid #ccc;
+                border-radius: 50px;
+                height: 20px; 
+            } */
+             
+                section h1::after{
+                    content: "긴급!!";
+                    background: red;
+                    color: white;
+                    font-size: 16px;
+                    margin-left: 7px;
+                    position: relative;
+                    top: -10px;
+                }
+                article p::first-line{
+                    color: blue;
+                }
+                article p::first-letter{
+                    font-size: 20px;
+                    background-color: yellow;
+                }
+                ::selection{
+                    background-color: white;
+                    color: aqua;
+                }
+                
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <header>
+                <img src="img/미니핀.jpg" alt="logo">
+                <nav>
+                    <ul>
+                        <li><a href="애완견종류.html">애완견종류</a></li>
+                        <li><a href="애완견용품.html">애완견용품</a></li>
+                        <li><a href="건강돌보기.html">건강돌보기</a></li>
+                        <li><a href="더불어살기.html">더불어살기</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <section>
+                <h1 id="애완견용품">강아지용품 준비하기</h1>
+                <article>
+                    <h3>강아지 집</h3>
+                    <p>강아지가 편히쉴 수 있는 포근한 집이 필요합니다. 강아지의 집은 강아지가 다 큰 후에도 계속 쓸수 있는 집으로 구입하
+                        세요. 집을 구입 하실 때는 박음질이 잘 되어 있는지, 세탁이 간편한 제품인지 꼭 학인하시고 고르시는 것이 좋습니다.</p>
+                </article>
+                <article>
+                    <h3>강아지 먹이</h3>
+                    <p>강아지의 먹이는 꼭 어린 강이지용으로 나와있는 사료를 선택하세요. 강아지들은 사람에 비해 성장속도가 8배정도 빠르답
+                        니다. 따라서 강아지에게는 성장속도에 맞는 사료를 급여하셔야 합니다. 사람이 먹느 음식을 먹게 되면 양념과 향신료에 입
+                        맛이 익숙해지고, 비만이 될 가능성이 매우 높아집니다. 강아지용 사료는 생후 12개월까지 급여하셔야 합니다.
+                    </p>
+                </article>
+                <article>
+                    <h3>밥그릇,물병</h3>
+                    <p>밥그릇은 쉽게 넘거지지 않도록 바닥이 넓은것이 좋습니다. 물병은 대롱 달린것이 아니고 밥 그릇형태의 
+                        바닥이 넓고 자연스럽게 혀를 말아 쓰면서 물을 마실수있게 훈련 해주는것이 좋습니다.
+                         </p>
+                </article>
+                <article>
+                    <h3>이름표,목줄</h3>
+                    <p>강아지를 잃어버릴 염려가 있으니 산책할 무렵이 되면 이름표를 꼭 목에 걸어주도록 하세요. 그리고 방울이 달린 목걸이를
+                         하고자 하실 떄는 신중하셔야 합니다. 움직일 때마다 방울이 딸랑 거리면 신경이 에민한 강아지들에게는 좋지 않은 영향을
+                        끼칠 수 있기 때문입니다.</p>
+                </article>
+            </section>
+            <aside>
+                <img src="img/강아지1.jpg" alt="강아지1" width="200" height="200">
+                <img src="img/강아지.png" alt="강아지"width="200" height="200">
+                <img src="img/강아지3.jpg" alt="강아지3"width="200" height="200">
+            </aside>
+            <footer>
+                <p>예담직업전문학교</p>
+                <address>대구 중구 태왕빌딩 5층</address>
+                <p> tel : 000-0000-0000</p>
+            </footer>
+        </div>
+    </body>
+</html>

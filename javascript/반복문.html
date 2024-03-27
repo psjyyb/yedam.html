@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+</head>
+<style>
+    div{
+        background-color: #ccc;
+        padding: 10px;
+        margin: 10px;
+        float: left;
+        color: hotpink;
+        width: 100px;
+    }
+    table{
+        width: 500px;
+        height: 500px;
+        border: 1px solid #ccc;
+        border-spacing: 10px;
+    }
+    td{
+        border: 1px solid #ccc;
+        background-color: aliceblue;
+        padding: 10px;
+        text-align: center;
+        
+    }
+</style>
+<body>
+    <h1>반복문</h1>
+    <script>
+    //    let sum = 0;
+    //    for(let i=5; i>=1; i--){
+    //     sum+=i;
+    //    console.log(`i = ${i}=>sum = ${sum}`);
+    //     }
+    //     //---------------------------------------------------
+    //     //합이 50을 넘는 순간에 n 값과 sum값을 출력
+    //     sum = 0;
+    //     let n = 0;
+    //     while (sum<150){
+    //         n++;
+    //         sum+=n;
+    //         // if(sum>50){
+    //         //      console.log(`1~${n}까지의 합 = ${sum}`)
+    //         //      break;
+    //         // }  
+    //     }
+    //      //---------------------------------------------------
+    //     console.log(`1~${n}까지의 합 = ${sum}`)
+    //    let sum2 = Number();
+    //    sum=0;
+    //    for(let i=1; i<=100; i++){
+    //         if(i%2==0){
+    //             sum2+=i;
+    //         }else{
+    //             sum+=i;
+    //         }               
+    //     }
+    //     //---------------------------------------------------
+    //     for (let i=1; i<=3; i++){
+    //         console.log(`바깥 for`)
+    //         for(let j=1; j<=4; j++){
+    //             console.log(`i=${i} --->j=${j}`)
+    //         }
+    //         console.log(`안쪽 for 완료`);
+    //     }
+    //     //중첩 반복문
+    //     //구구단
+    //     //문서에 출력
+    //     for( let i = 2; i<=19; i++){
+    //         console.log(`====${i}단====`)
+    //         document.write(`<div>`);
+    //         document.write(`===${i}단===<br>`)
+    //         for(let j = 1; j<=9; j++){
+    //             console.log(` ${i} x ${j} = ${i*j} `);
+    //             document.write(`${i} x ${j} = ${i*j}<br>`);
+    //         }
+    //         document.write(`</div>`);
+    //     }
+    //     //---------------------------------------------------
+    //    let fact = Number(prompt())
+    //    let acc = 1;
+    //     for( let i = fact; i>=1; i--){
+    //         acc *= i;
+    //     }
+    //     console.log(`${fact}! = ${acc} `);
+    //     //----------------------------------------------------
+    //    let number =Number(prompt());
+    //     if(number%4==0){
+    //         console.log("4의배수");
+    //     }else{
+
+    // //     }
+    //     //----------------------------------------------------
+    //     let multiple = 0
+    //     for (let i=1; i<=100; i++){
+    //         if(i%3==0&&i%5==0){
+    //             multiple++
+    //             console.log(i)
+    //         }
+    //     }
+    //      console.log(multiple)
+    //      //----------------------------------------------------
+    //         let hap =0;
+    //      for( let i=0; i<=100; i=i+5){
+    //         hap+=i;
+    //      }
+    //      console.log(hap)
+    //      let pap =0;
+    //      for(let i=0; i<=100; i++){
+    //         if(i%5==0){
+    //             pap+=i;
+    //         }
+    //      }
+    //      console.log(pap)
+    //      //----------------------------------------------------
+    //      let star = '';
+    //      let b = " ";
+    //      for (let i=1; i<=5; i++){            
+    //         for( let j=1; j<=5-i; j++){
+    //             star += " ";
+    //         }
+    //        for( let k=1; k<=i; k++){
+    //         star+="*";
+    //        }
+    //        star+=`\n`;
+    //     }
+    //      console.log(star)
+    //       //----------------------------------------------------
+    //      //다이아몬드 별찍기
+    //      let stars = "";
+    //      let s =0;
+    //      for (let i=1; i<=5; i++){
+    //         for(let j=1; j<=5-i; j++){
+    //             stars+= " ";
+    //         }
+    //         for(let k=1; k<=2*i-1; k++){
+    //             stars+="*";
+    //         }
+    //          stars+="\n";
+    //     }
+    //        for(let i=1; i<=4; i++){
+    //         for(let j=1; j<=i; j++){
+    //             stars+=" ";
+    //         }
+    //         for(let k=1; k<=7-s; k++){
+    //            stars+="*";
+    //         }
+    //         stars+="\n";
+    //          s=s+2;
+    //     }
+    //         console.log(stars)
+    //          //----------------------------------------------------
+    //          //모래시계
+    //          let watch = "";
+    //          let p =0;
+    //          let o =0;
+    //          for(let i=1; i<=5; i++){
+    //             for(let k=1; k<=i; k++){
+    //                 watch+=" ";
+    //             }
+    //             for(let j=1; j<=9-p; j++){
+    //                 watch+="*";
+    //             }
+    //                 watch+="\n";
+    //                 p=p+2;
+    //         }
+    //             for( let i=1; i<=4; i++){
+    //                 for(let j=1; j<=5-i; j++){
+    //                     watch+=" ";
+    //                 }
+    //                 for(let k=1; k<=2*i+1; k++){
+    //                     watch+="*";
+    //                 }
+    //               watch+="\n";
+    //                 o=o+2;
+    //             }
+    //     console.log(watch)
+        //----------------------------------------------------
+        //좌석 번호 매기기
+        //입장객 수 입력받기
+        //한 줄에 몇명을 앉힐건지 입력받기
+
+        //몇줄을 만들어야 할지 계산
+
+        //반복문을 이용해서 줄 수 만큼, 의자 배치, 좌석번호 표시
+        //좌석번호는 입장객 수 만큼 표시
+        let person = Number(prompt());
+        let chair = Number(prompt());
+        let line = 0;
+        let number=0;
+        let chn ="";
+                if(person%chair==0){
+                    line= person/chair;
+                }else{
+                    line = (Math.floor(person/chair))+1;
+                } 
+                
+                chn = `<table>
+                    <caption>좌석배치도</caption>`;
+                for(let i=1; i<=line; i++){
+                    chn +=`<tr>`
+                   for(let j=1; j<=chair; j++){
+                        number++
+                    chn += `<td>좌석번호 ${number}</td>`
+                        if(number>=person) break;
+                   }
+                     chn +=`</tr>`; 
+                }
+                     
+               chn+= `</table>`;
+               document.write(chn);
+    </script>   
+</body>
+</html>

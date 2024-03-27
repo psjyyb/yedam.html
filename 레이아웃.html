@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        #container{
+            width: 900px;
+            margin: 0 auto;
+        }
+        #container div{
+            width: 300px;
+            height: 70px;
+            margin: 5px;
+            padding: 10px;
+        }
+        .box1{
+            background: yellow;
+            box-sizing: border-box;
+        }
+        .box2{
+            background: rgb(34, 233, 110);
+            position: relative;
+            top: -50px;
+            left: 100px;
+        }
+        .box3{
+            background: rgb(145, 145, 8);
+            float: left;
+        }
+        .box4{
+            background: rgb(91, 88, 238);
+            float: right;
+        }
+        .box5{
+            background: rgb(241, 113, 220);
+            clear: both;
+            position: relative;
+            width: 500px !important;
+            height: 300px !important;
+        }
+        .box5 .abs{
+            background: red;
+            position: absolute;
+            width: 50px !important;
+            height: 50px !important;
+        }
+        .box6{
+            background: rgb(240, 168, 34);
+            clear: both;
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+            width: 70px !important;
+            height: 70px !important;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 70px;
+        }
+        .b1{
+            left: 0;
+            top: 0;
+        }
+        .b2{
+            top: 0;
+            right: 0;
+        }
+        .b3{
+            left: 0;
+            bottom: 0;
+        }
+        .b4{
+            right: 0;
+            bottom: 0;
+        }
+        .b5{
+            left: 215px;
+            top: 122.5px;
+            z-index: 1;
+        }
+        .b6{ left: 230px;
+            top: 130px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box1">11.box-sizing: boder-box</div>
+        <div class="box2"></divcalss>>2.box-sizing: contents-box</div>
+        <div class="box3">3.float:left</div>
+        <div class="box4">4.float:rigth</div>
+        <div class="box5">5.float:none
+            <div class="abs b1">1</div>
+            <div class="abs b2">2</div>
+            <div class="abs b3">3</div>
+            <div class="abs b4">4</div>
+            <div class="abs b5">5</div>
+            <div class="abs b6">6</div>
+        </div>
+        <div class="box6">6.top</div>
+    </div>
+</body>
+</html>

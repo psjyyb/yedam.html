@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3단 레이아웃</title>
+    <style>
+        /* #container{
+            width: 960px;
+            margin: 0 auto;
+            padding: 20;
+        }
+        header{
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        #left{
+            border: 1px solid #ccc;
+            width: 220px;
+            padding: 20px;
+            float: left;
+            margin-bottom: 20px;
+            background-color: #dce2f5;
+        }
+        section{
+            border: 1px solid #ccc;
+            padding: 20px;
+            float: left;
+            margin: 0px 20px 5px;
+            width: 384px;
+        }
+        #light{
+            border: 1px solid #ccc;
+            width: 220px;
+            padding: 20px;
+            float: right;
+            margin-bottom: 20px;
+            background-color: #dce2f5;
+        }
+        footer{
+            border: 1px solid #ccc;
+            clear: both;
+            padding: 10px;
+        }
+        p{
+            color: rgb(18, 169,18);
+            font-weight: bold;
+        } */
+        #container{
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            text-align: center;
+            background-color: rgb(11, 233, 214);
+        }
+        header{
+            width: 100%;
+            background-color: aquamarine;
+        }
+        aside{
+            width: 14%;
+            background-color: rgb(174, 236, 236);
+        }
+        section{
+            width: 69%;
+            background-color:  aqua;
+        }
+        footer{
+            width: 100%;
+            background-color: rgb(162, 248, 248);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <p> - container : 테두리 1, 너비 960, 안여백20, 화면중앙에 위치</p>
+            <p> - header : 테두리 1, 안여백 10, 아래 요소와 간격 20</p>
+            <h1>사이트 제목</h1>
+        </header>
+        <aside id="left">
+            <h3>왼쪽 사이드 바</h3>
+            <h4>광고 1</h4>
+            <h4>광고 2</h4>
+            <p>테두리 1, 너비220,안여백20,<br>왼쪽으로 플로팅, <br>아래요소와 간격20</p>
+        </aside>
+        <section>
+            <h3>본문</h3>
+            <h4>내용 입력1</h4>
+            <h4>내용 입력2</h4>
+            <p>테두리 1, 너비???,<br> 안여백20, 왼쪽으로 플로팅,<br>좌우 요소와의 간격 5, 아래요소와의간경20</p>
+        </section>
+        <aside id="light">
+            <h3>오른쪽 사이드 바</h3>
+            <h4>광고 1</h4>
+            <h4>광고 2</h4>
+            <p>테두리 1, 너비220,안여백20,<br>오른쪽으로 플로팅, <br>아래요소와 간격20</p>
+        </aside>
+        <footer>
+            <h4>푸터</h4>
+            <h4>저작권 정보, 연락처 등</h4>
+            <p>테두리 1, 양쪽플로팅 헤제, 안여백 10</p>
+        </footer>
+    </div>
+</body>
+</html>

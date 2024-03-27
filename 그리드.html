@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드</title>
+</head>
+<style>
+    #wrapper{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+        grid-template-rows: minmax(100px,auto);
+        /* column-gap: 10px;
+        row-gap: 20px; */
+        gap: 20px 10px;
+    }
+    #wrapper div:nth-child(2n-1){
+        background-color: aquamarine;
+    }
+    #wrapper div:nth-child(2n){
+        background-color: aqua;
+    }
+</style>
+<body>
+    <div id="wrapper">
+        <div class="items1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis voluptate recusandae rerum saepe! Aliquam minima repellendus ipsum odit nisi explicabo veritatis, maiores voluptas quam nulla! Exercitationem alias enim quo!</div>
+        <div class="items2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis voluptate recusandae rerum saepe! Aliquam minima repellendus ipsum odit nisi explicabo veritatis, maiores voluptas quam nulla! Exercitationem alias enim quo!</div>
+        <div class="items3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis voluptate recusandae rerum saepe! Aliquam minima repellendus ipsum odit nisi explicabo veritatis, maiores voluptas quam nulla! Exercitationem alias enim quo!</div>
+        <div class="items4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis voluptate recusandae rerum saepe! Aliquam minima repellendus ipsum odit nisi explicabo veritatis, maiores voluptas quam nulla! Exercitationem alias enim quo!</div>
+        <div class="items5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus perferendis voluptate recusandae rerum saepe! Aliquam minima repellendus ipsum odit nisi explicabo veritatis, maiores voluptas quam nulla! Exercitationem alias enim quo!</div>
+    </div>
+</body>
+</html>
